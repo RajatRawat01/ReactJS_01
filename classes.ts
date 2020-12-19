@@ -96,19 +96,138 @@ console.log(obj.getSubOne(),
  //4 Hirarical inheritance.
  //5. Hybrid Inheritance.
 
+//......Single level Inhritance.
 
- class class_one {
-     var_one:any = "Parent Class !!!";
- };
- class class_two extends class_one {
-    var_two:any = "Child class!!!";
- };
-//how to creat obj to parent.
- let obj1:class_one = new class_one;
- console.log(obj1.var_one);
+//  class class_one {
+//      var_one:any = "Parent Class !!!";
+//  };
+//  class class_two extends class_one {
+//     var_two:any = "Child class!!!";
+//  };
+// //how to creat obj to parent.
+//  let obj1:class_one = new class_one;
+//  console.log(obj1.var_one);
 
- //obj to class2 
- let obj2:class_two = new class_two;
- console.log(obj2.var_one, obj2.var_two);
- 
+//  //obj to class2 
+//  let obj2:class_two = new class_two;
+//  console.log(obj2.var_one, obj2.var_two);
 
+
+// class class_one{
+//     constructor(public arg1:any){}
+// };
+// class class_two extends class_one{
+// };
+// let obj:class_two = new class_two("Hello");
+// console.log( obj.arg1 );     //Hello
+
+/*
+
+class class_one{
+    arg1:any;
+    constructor(param1:any)
+    {
+        this.arg1 = param1;
+
+    };
+
+    getArg1():any{
+        return this.arg1;
+    };
+};
+
+class class_two extends class_one{
+    //overrding willbe happened here
+    arg2:any;
+    constructor(param1:any,param2:any){
+        super(param2);
+        this.arg2 = param1;
+        
+    }
+
+    getArg2():any {
+        return this.arg2;
+
+    };
+};
+
+let obj1:class_two = new class_two("Hello_1","Hello2");
+//hello1 goes to param1 and hello2 goes to param2-->will call
+//the parant class.
+
+console.log( obj1.getArg1(),
+obj1.getArg2() );
+
+*/
+
+
+
+// Multi level Inheritance.
+
+
+/*
+class class_one{
+    arg1:any;
+    constructor(param1:any){
+        this.arg1 = param1;
+    };
+};
+class class_two extends class_one{
+    arg2:any;
+    constructor(param1:any,param2:any){
+        super(param1);
+        this.arg2 = param2;
+    };
+};
+class class_three extends class_two{
+    arg3:any;
+    constructor(param1:any,param2:any,param3:any){
+        super(param1,param2);
+        this.arg3 = param3;
+    };
+};
+let obj:class_three = new class_three("Hello_1","Hello_2","Hello_3");
+console.log( obj.arg1, obj.arg2, obj.arg3 );   //Hello_1 Hello_2 Hello_3
+
+*/
+
+
+// multiple Inheritance.
+/*
+    class class_one{}
+    class class_two{}
+    class class_three extends class_one,class_two{}
+    //multiple inheritance not supported by TypeScript
+*/
+
+ //hirarichal inheritance
+ /*class class_one{
+    arg1:any="Hello_1";
+};
+class class_two extends class_one{
+    arg2:any = "Hello_2";
+};
+class class_three extends class_one{
+    arg2:any = "Hello_3";
+};
+class class_four extends class_one{
+    arg2:any = "Hello_4";
+};
+let obj1:class_two = new class_two();
+console.log( obj1.arg1, obj1.arg2 );    //Hello_1 Hello_2
+let obj2:class_three = new class_three();
+console.log( obj2.arg1, obj2.arg2 );    //Hello_1 Hello_3
+let obj3:class_four = new class_four();
+console.log( obj3.arg1, obj3.arg2 );    //Hello_1 Hello_4
+
+*/
+
+ //Hybrid
+ /*
+ class class_one{}
+ class class_two extends class_one{}
+ class class_three extends class_one{}
+ class class_four extends class_two,class_three{}
+ //Hybrid inheritance also not supported by TypeScript
+
+ */
