@@ -96,5 +96,5 @@ interface interface1{
 let obj:interface1 = {
     arg1 : "Hello_1"
 };
-
+//9899777915
 console.log( obj.arg1 );
