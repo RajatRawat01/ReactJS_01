@@ -5,9 +5,10 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 import {First} from "./Firstcomp";
 import { Comp1 } from "./Comp1"
+import {ParentComp} from "./ParentComp";
 ReactDOM.render(
   <React.StrictMode>
-    <Comp1 />
+    <ParentComp />
   </React.StrictMode>,
   document.getElementById('root')
 );
