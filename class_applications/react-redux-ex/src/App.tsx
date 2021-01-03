@@ -1,4 +1,5 @@
 import React from "react";
+// useSelector--> Susbricption operation and useDispatch using Dispatch Operations.
 import {useSelector,useDispatch} from "react-redux";
 export default function App():any{
       const my_state:any = useSelector(state => state);

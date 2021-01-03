@@ -1,6 +1,5 @@
 //import createStore function
 const {createStore} = require("redux");
-
 //initial state
 const initialState = {
     bal : 5000
